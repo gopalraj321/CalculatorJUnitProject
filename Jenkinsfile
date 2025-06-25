@@ -3,12 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'echo Building on Windows'
-            }
-        }
-        stage('Test') {
-            steps {
-                bat 'echo Running tests on Windows'
+                bat 'echo Building branch: %BRANCH_NAME%'
             }
         }
     }
